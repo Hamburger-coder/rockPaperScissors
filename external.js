@@ -1,4 +1,19 @@
-let playerChoice = prompt("Pls input rock, paper, or scissors:").toLowerCase();
+let playerChoice;
+let rockButton = document.querySelector("#rock");
+let paperButton = document.querySelector("#paper");
+let scissorsButton = document.querySelector("#scissors");
+
+rockButton.addEventListener("click", ()=> {
+  playerChoice = "rock";
+})
+
+paperButton.addEventListener("click", ()=> {
+  playerChoice = "paper";
+})
+
+scissorsButton.addEventListener("click", ()=> {
+  playerChoice = "scissors";
+})
 
 const options = [
   "Rock",
@@ -37,12 +52,10 @@ function gameRound(computerChoice) {
     }
 }
 
+const submitButton = document.getElementById("submit");
 
-const choice = getComputerChoice();
-gameRound(choice);
-
-const restartButton = document.getElementById("restart");
-
-restartButton.addEventListener("click", () => {
-  window.location.reload();
+submitButton.addEventListener("click", () => {
+  const choice = getComputerChoice();
+  gameRound(choice);
+  playerChoice = undefined;
 })
