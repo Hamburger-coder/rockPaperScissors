@@ -9,6 +9,77 @@
   margin-left: auto;
 }
 
-h1 {
-  color: red;
+.header {
+  color: rgb(7, 5, 5);
+  text-align: center;
+  font-family: 'Lobster';
+  font-size: 80px;
+}
+
+body {
+  background-color: rgb(26, 175, 71);
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+}
+
+#submit {
+  color: white;
+  padding: 50px;
+  background-color: #3882F6;
+  border-radius: 20px;
+  border-color: #3882F6;
+  font-size: 40px;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+#submit:hover {
+  opacity: .75;
+}
+
+#submit:active {
+  padding-top: 40px;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+}
+
+#winOrLose {
+  font-size: 50px;
+  font-family: "Teko";
+}
+
+#rock:hover {
+  opacity: .5;
+}
+
+#paper:hover {
+  opacity: .5;
+}
+
+#scissors:hover {
+  opacity: .5;
+}
+
+.score-heading {
+  text-align: center;
+}
+
+.h2-description {
+  text-align: center;
+}
+
+.score-h3 {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.bigbannerwon {
+  display: flex;
+  justify-content: center;
 }
