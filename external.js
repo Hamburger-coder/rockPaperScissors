@@ -7,6 +7,8 @@ let playerScore = 0;
 let computerScore = 0;
 let testy;
 
+
+
 function didWin() {
   if (playerScore === 5) {
     document.getElementById("whoWonny").innerHTML = "You wonny the gamey!! Reload to play again.";
@@ -21,18 +23,7 @@ function didWin() {
   } 
 }
 
-// Event listeners for all the images.
-rockButton.addEventListener("click", ()=> {
-  playerChoice = "rock";
-})
 
-paperButton.addEventListener("click", ()=> {
-  playerChoice = "paper";
-})
-
-scissorsButton.addEventListener("click", ()=> {
-  playerChoice = "scissors";
-})
 
 // Options for the computer ot choose from.
 const options = [
@@ -80,10 +71,32 @@ function gameRound(computerChoice) {
     }
 }
 
-  const submitButton = document.getElementById("submit");
 
-  // Adding and event listener to the submit button
-submitButton.addEventListener("click", () => {
+// Event listeners for all the images.
+rockButton.addEventListener("click", ()=> {
+  playerChoice = "rock";
+  const choice = getComputerChoice();
+  gameRound(choice);
+  document.getElementById("winOrLose").innerHTML = message;
+  document.getElementById("pscore").innerHTML = "Player Score: " + playerScore;
+  document.getElementById("cscore").innerHTML = "Computer Score: "  + computerScore;
+  didWin();
+  playerChoice = undefined;
+})
+
+paperButton.addEventListener("click", ()=> {
+  playerChoice = "paper";
+  const choice = getComputerChoice();
+  gameRound(choice);
+  document.getElementById("winOrLose").innerHTML = message;
+  document.getElementById("pscore").innerHTML = "Player Score: " + playerScore;
+  document.getElementById("cscore").innerHTML = "Computer Score: "  + computerScore;
+  didWin();
+  playerChoice = undefined;
+})
+
+scissorsButton.addEventListener("click", ()=> {
+  playerChoice = "scissors";
   const choice = getComputerChoice();
   gameRound(choice);
   document.getElementById("winOrLose").innerHTML = message;
